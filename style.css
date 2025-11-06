@@ -1,7 +1,13 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
 }
 
 header, footer {
@@ -11,9 +17,13 @@ header, footer {
     padding: 10px;
 }
 
+footer {
+    margin-top: auto;
+}
+
 .content {
     display: flex;
-    min-height: 80vh;
+    flex: 1;
 }
 
 aside {
@@ -26,12 +36,14 @@ aside {
 aside ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 aside li {
     padding: 8px;
     cursor: pointer;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 aside li.active,
@@ -49,6 +61,7 @@ main {
     background: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 #answers button {
@@ -59,6 +72,7 @@ main {
     border: 1px solid #ccc;
     background: #eee;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 #answers button:hover {
@@ -72,4 +86,9 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+#next:hover {
+    background: #2f6ce5;
 }
